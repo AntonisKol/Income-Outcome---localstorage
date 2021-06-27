@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script async src="/main.js"></script>
+    <title>Document</title>
+</head>
+
+<body class="wrapper">
+    <table class="container">
+        <tr class="form">
+            <td rowspan=2 class="first-column">
+                </td>
+            <td class=" second-column">
+                <h1>Income/Outcome</h1>
+                <form onsubmit="addToTable(event)">
+                    <div class="flex">
+                        <div class="container">
+                            <div class="flex-left">
+                                <label for="amount">Amount</label><input type="number" name="amount" id="amount">
+                                <select id="cur" name="cur">
+                                    <option id="cur" value="EUR">EUR</option>
+                                    <option id="cur" value="USD">USD</option>
+                                    <option id="cur" value="PEN">PEN</option>
+                                    <option id="cur" value="OTHER">OTHER</option>
+                                </select>
+                                <div><label for="date">Date</label> <input type="date" value="date" id="date"></div>
+
+                                <div><label>Type</label>
+                                    <input type="radio" id="outcome" value="expense">
+                                    <label for="outcome">Expense</label>
+                                    <input type="radio" id="income" value="income">
+                                    <label for="income">Income</label></div>
+                            </div>
+                            <div class="flex-right">
+                                <div><label for="exp">Reason</label><textarea id="exp" rows="3" cols="35"
+                                        name="comment" form="usrform">Enter your expense here</textarea></div>
+                                <div><label for="For">For</label><input type="checkbox" id="myself" name="self"
+                                        value="self">
+                                    <label for="self"> Self</label>
+                                    <input type="checkbox" id="family" name="family" value="family">
+                                    <label for="self"> Family</label>
+                                    <input type="checkbox" id="friend" name="friend" value="friend">
+                                    <label for="self"> Friend</label>
+                                </div>
+                                <div class="btn-container" >
+                                <button  class="btn" input=“submit”>Add transaction</button>
+                            </div>
+                            </form>
+                            </div>
+
+            </td>
+            </div>
+
+
+            
+        </tr>
+        <tr>
+            <td class="second-column">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Expenditure</th>
+                            <th>Type</th>
+                            <th>For</th>
+                        </tr>
+                    </thead>
+                    <tbody id=data>
+                        </tbody>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
